@@ -1,0 +1,19 @@
+{{yield}}
+<div class="todo-body">
+<article class="todo-list">
+	<h1>Todos:</h1>
+
+	<ul class="list-group">
+  		{{#each getData as |todo|}}
+  		   <li class="list-group-item">{{todo}}</li>
+  		{{/each}}
+
+	</ul>
+</article>
+
+<form {{action 'addTodo' todo-list on='submit'}}>
+  <label for="add_todo">Add Todo list</label>
+  {{input id='add_todo' class="form-control" placeholder='Enter list' value=todo-list}}
+  <button type="submit" class="btn btn-success ">Add</button>
+</form>
+</div>
