@@ -1,18 +1,21 @@
-'use strict';
+'use strict'
 
-const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const EmberApp = require('ember-cli/lib/broccoli/ember-app')
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
     sassOptions: {
-        includePaths: [
-          'bower_components/bootstrap-sass/assets/stylesheets'
-        ]
+      includePaths: [
+        'bower_components/bootstrap-sass/assets/stylesheets'
+      ]
+    },
+    'ember-cli-qunit': {
+      useLintTree: false
     }
-  });
+  })
 
-  app.import('bower_components/bootstrap-sass/assets/javascripts/bootstrap.js');
+  app.import('bower_components/bootstrap-sass/assets/javascripts/bootstrap.js')
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
@@ -26,5 +29,5 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree();
-};
+  return app.toTree()
+}
