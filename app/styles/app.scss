@@ -10,3 +10,16 @@
 .todo-body button {
 	margin-top:5px;
 }
+
+.close {
+	position: absolute;
+	right: 0px;
+	margin-top:  -30px !important;
+	margin-right:  6%;
+	color: red !important;
+	cursor: pointer !important;
+}
+.checkbox {
+	margin-top: -30px;
+	margin-left: -20px;
+}

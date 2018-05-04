@@ -5,7 +5,11 @@
 
 	<ul class="list-group">
   		{{#each getData as |todo|}}
-  		   <li class="list-group-item">{{todo}}</li>
+  		   <li class="list-group-item">{{todo.name}}</li>
+  		   <button type="button" class="close" {{action 'removeTodo' todo.name}}>×</button>
+  		   <div class="checkbox">
+			  <label><input  type="checkbox" id="checkbox" checked={{todo.checked}} valueBinding="checkbox" {{action 'checkTodo' todo.name}}></label>
+			</div>
   		{{/each}}
 
 	</ul>
